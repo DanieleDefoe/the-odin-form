@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi! Sign up now to get started.">
+    <meta name="keywords" content="the odin project, form, the odin project form">
+    <meta name="author" content="Abuzar Mamedov">
+    <title>The Odin Form</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="shortcut icon" href="./images/icon.svg" type="image/x-icon">
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body class="page">
+    <section class="hero">
+        <div class="text-content">
+            <img src="./images/odin.png" alt="The Odin Project Logo" class="hero__logo">
+            <h1 class="hero__title">the odin form</h1>
+        </div>
+    </section>
+    <section class="form-container">
+        <h2 class="form-container__title">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+        <p class="form-container__subtitle">You <em>know</em> you want to.</p>
+        <form class="form-signup" id="form" name="form" spellcheck="true">
+            <h3 class="form__title">Let's do this!</h3>
+            <fieldset class="form__inputs">
+                <label for="name">first name
+                    <input type="text" class="form__input" name="name" required id="name" minlength="3" maxlength="20" autofocus>
+                </label>
+                <label for="surname">last name
+                    <input type="text" class="form__input" name="surname" required id="surname" minlength="3" maxlength="20">
+                </label>
+                <label for="email">email
+                    <input type="email" class="form__input" name="email" required id="email">
+                </label>
+                <label for="phone_number">phone number
+                    <input type="tel" class="form__input" required id="phone_number" name="phone_number" maxlenght="12" pattern="^[87(+7)]\s?9\d{2}\s?\d{3}\s?\d{2}\s?\d{2}">
+                </label>
+                <label for="password">password
+                    <input type="password" class="form__input" required id="password" autocomplete="off" title="Example: Arsgszbfsh6246.%" name="password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$">
+                </label>
+                <label for="confirm">confirm password
+                    <input type="password" class="form__input" required id="confirm" autocomplete="off" name="confirm" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$">
+                </label>
+            </fieldset>
+            <button class="form__submit" type="submit">Create account</button>
+        </form>
+        <p class="switch-form">Already have an&nbsp;account? <a href="#" class="switch-link">Log in</a></p>
+    </section>
+</body>
+</html>
