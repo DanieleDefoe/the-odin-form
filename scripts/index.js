@@ -1,13 +1,15 @@
 const form = document.querySelector('.form-signup');
-const checkPassword = (e) => {
-    const password = document.querySelector('#password').value;
-    const confirm = document.querySelector('#confirm').value;
-    if (password !== confirm) {
-        alert('Passwords do not match');
-        e.preventDefault();
-    } else {
-        alert('SUCCESS!');
+const submitBtn = form.querySelector('.form__submit');
+const inputs = Array.from(form.querySelectorAll('input'));
+
+const validate = () => {
+    const password = form.querySelector('#password').value;
+    const confirm = form.querySelector('#confirm').value;
+    if (password === confirm && inputs.every(input => input.checkValidity())) {
+        submitBtn.removeAttribute('disabled');
+    } else if (!submitBtn.hasAttribute('disabled')) {
+        submitBtn.setAttribute('disabled', true);
     }
 };
 
-form.addEventListener('submit', checkPassword);
+form.addEventListener('keyup', validate);

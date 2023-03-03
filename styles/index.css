@@ -153,6 +153,10 @@
     transition: all .3s ease-in-out;
 }
 
+.form__submit:disabled {
+    background: rgba(122, 122, 122, .8);
+}
+
 .switch-form {
     font-size: 2rem;
 }
@@ -164,7 +168,7 @@
 }
 
 @media (hover: hover) {
-    .form__submit:hover {
+    .form__submit:enabled:hover {
         cursor: pointer;
         background: green;
         box-shadow: var(--main-box-shadow);
