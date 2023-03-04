@@ -189,6 +189,7 @@
         box-sizing: border-box;
         height: 25vh;
         width: 100%;
+        min-height: 150px;
     }
 
     .hero__title {
